@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make build"
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "make test"
+        },
+        {
+            "label": "build wasm",
+            "type": "shell",
+            "command": "make build-wasm",
+            "problemMatcher": [
+                "$go"
+            ]
+        },
+        {
+            "label": "copy wasm exec from goroot",
+            "type": "shell",
+            "command": "cp /usr/local/go/misc/wasm/wasm_exec.js .",
+            "problemMatcher": [
+                "$go"
+            ]
+        }
+    ]
+}
